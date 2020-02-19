@@ -1,0 +1,24 @@
+﻿@model TokensModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<h1>Access Token</h1>
+
+<h3>@Model.AccessToken</h3>
+
+<h1>Id Token</h1>
+
+<h3>@Model.IdToken</h3>
+
+<h1>User Claims</h1>
+
+<ul>
+    @foreach (var item in Context.User.Claims)
+    {
+    <li>
+        Type: &nbsp;@item.Type &nbsp; Value: &nbsp;@item.Value
+    </li>
+    }
+</ul>
+
